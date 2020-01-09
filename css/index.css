@@ -1,1 +1,379 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* Begin Styles */
+.linkStyle {
+  font-size: 1.25rem;
+  color: #ff9900;
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+}
+.linkHover {
+  color: #336600;
+}
+#container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1%;
+  border: 1px solid #333;
+  background-color: #fdfdfd;
+  font-size: 1rem;
+  font-family: 'Cabin', sans-serif;
+}
+@media (max-width: 500px) {
+  #container {
+    width: 100%;
+  }
+}
+#container header {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #888;
+  padding-bottom: 20px;
+}
+#container header nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+  max-width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  #container header nav {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+#container header nav a {
+  font-size: 1.25rem;
+  color: #ff9900;
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  padding: 1%;
+  text-transform: uppercase;
+}
+#container header nav a:hover {
+  color: #336600;
+}
+#container #intro {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+}
+@media (max-width: 500px) {
+  #container #intro {
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+#container #intro figure {
+  width: 50%;
+  margin-right: 10%;
+}
+@media (max-width: 500px) {
+  #container #intro figure {
+    display: none;
+  }
+}
+#container #intro figure img {
+  max-width: 100%;
+}
+#container #biography {
+  width: 50%;
+  line-height: 1.75rem;
+}
+@media (max-width: 500px) {
+  #container #biography {
+    width: 100%;
+    line-height: normal;
+    text-align: center;
+    padding: 10px;
+  }
+}
+#container #biography h1 {
+  font-size: 2rem;
+  color: #ff9900;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#container #biography h2 {
+  font-size: 1.75rem;
+  color: #ff9900;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#container #biography h3 {
+  font-size: 1.5rem;
+  color: #ff9900;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+#container #biography button {
+  font-size: 1.25rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 2%;
+  background: #ff9900;
+  border: 1px solid #ccc;
+  margin: 25px auto;
+}
+#container #biography button:hover {
+  background: #336600;
+  cursor: pointer;
+}
+#container #biography p {
+  font-size: 1.25rem;
+}
+#container #biography p span a {
+  color: #ff9900;
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+#container #biography p span a:hover {
+  color: #336600;
+}
+#container #skills {
+  border-bottom: 1px solid #ccc;
+}
+#container #skills h4 {
+  font-size: 1.5rem;
+  color: #336600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin: 25px auto 5px auto;
+}
+#container #skills ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  #container #skills ul {
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+#container #skills ul li {
+  font: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  color: #ff9900;
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px 10px 25px 10px;
+}
+@media (max-width: 500px) {
+  #container #skills ul li {
+    text-align: center;
+    margin: 5px;
+  }
+}
+#container #work-history {
+  padding-top: 25px;
+}
+#container #work-history h4 {
+  font-size: 1.5rem;
+  color: #336600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+#container #work-history #box-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  #container #work-history #box-container {
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+#container #work-history .box {
+  border: 1px solid #888;
+  padding: 10px;
+  margin: 5px;
+}
+#container #work-history .box h4 {
+  font-size: 1rem;
+  color: #336600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#container #work-history .box .subtitle {
+  font-style: italic;
+  color: #888;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#container #work-history .box ul {
+  margin-left: 20px;
+}
+#container #work-history .box ul li {
+  display: list-item;
+  list-style-type: square;
+  margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  #container #work-history .box ul li {
+    display: block;
+    text-align: center;
+  }
+}
