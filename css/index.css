@@ -154,6 +154,11 @@ body {
   font-size: 1rem;
   font-family: 'Cabin', sans-serif;
 }
+@media (max-width: 500px) {
+  #container {
+    width: 100%;
+  }
+}
 #container header {
   width: 100%;
   margin-bottom: 2rem;
@@ -167,6 +172,16 @@ body {
   flex-direction: row;
   max-width: 50%;
   margin: 0 auto;
+}
+@media (max-width: 500px) {
+  #container header nav {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 #container header nav a {
   font-size: 1.25rem;
@@ -187,9 +202,22 @@ body {
   border-bottom: 1px solid #ccc;
   padding-bottom: 25px;
 }
+@media (max-width: 500px) {
+  #container #intro {
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 #container #intro figure {
   width: 50%;
   margin-right: 10%;
+}
+@media (max-width: 500px) {
+  #container #intro figure {
+    display: none;
+  }
 }
 #container #intro figure img {
   max-width: 100%;
@@ -197,6 +225,14 @@ body {
 #container #biography {
   width: 50%;
   line-height: 1.75rem;
+}
+@media (max-width: 500px) {
+  #container #biography {
+    width: 100%;
+    line-height: normal;
+    text-align: center;
+    padding: 10px;
+  }
 }
 #container #biography h1 {
   font-size: 2rem;
@@ -262,6 +298,13 @@ body {
   justify-content: center;
   flex-direction: row;
 }
+@media (max-width: 500px) {
+  #container #skills ul {
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 #container #skills ul li {
   font: 'Josefin Sans', sans-serif;
   font-size: 1rem;
@@ -269,6 +312,12 @@ body {
   border: 1px solid #333;
   padding: 10px;
   margin: 10px 10px 25px 10px;
+}
+@media (max-width: 500px) {
+  #container #skills ul li {
+    text-align: center;
+    margin: 5px;
+  }
 }
 #container #work-history {
   padding-top: 25px;
@@ -287,6 +336,13 @@ body {
   align-content: center;
   justify-content: center;
   flex-direction: row;
+}
+@media (max-width: 500px) {
+  #container #work-history #box-container {
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 #container #work-history .box {
   border: 1px solid #888;
@@ -314,4 +370,10 @@ body {
   display: list-item;
   list-style-type: square;
   margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  #container #work-history .box ul li {
+    display: block;
+    text-align: center;
+  }
 }

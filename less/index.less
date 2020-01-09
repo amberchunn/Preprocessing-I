@@ -170,6 +170,11 @@ body {
 	justify-content: @j;
 	flex-direction: @d;
 }
+.flexMobileLayout(@d, @j, @a) {
+	align-content: @a;
+	justify-content: @j;
+	flex-direction: @d;
+}
 // Styles
 
 #container {
@@ -181,6 +186,9 @@ body {
 	background-color: #fdfdfd;
 	font-size: 1rem;
 	font-family: @mainFont;
+	@media (max-width: 500px) {
+		width: 100%;
+	}
 
 	header {
 		width: 100%;
@@ -191,6 +199,12 @@ body {
 			.flexLayout(row, space-around, center);
 			max-width: 50%;
 			margin: 0 auto;
+			@media (max-width: 500px) {
+				max-width: 100%;
+				width: 100%;
+				text-align: center;
+				.flexMobileLayout(column, center, center);
+			}
 			a {
 				.linkStyle();
 				padding: 1%;
@@ -205,9 +219,16 @@ body {
 		.flexLayout(row, center, center);
 		border-bottom: 1px solid #ccc;
 		padding-bottom: 25px;
+		@media (max-width: 500px) {
+			width: 100%;
+			.flexMobileLayout(column, center, center);
+		}
 		figure {
 			width: 50%;
 			margin-right: 10%;
+			@media (max-width: 500px) {
+				display: none;
+			}
 			img {
 				max-width: 100%;
 			}
@@ -216,6 +237,12 @@ body {
 	#biography {
 		width: 50%;
 		line-height: 1.75rem;
+		@media (max-width: 500px) {
+			width: 100%;
+			line-height: normal;
+			text-align: center;
+			padding: 10px;
+		}
 		h1 {
 			.heading(2rem, @accentColor);
 			margin-bottom: 15px;
@@ -264,6 +291,9 @@ body {
 		}
 		ul {
 			.flexLayout(row, center, center);
+			@media (max-width: 500px) {
+				.flexMobileLayout(column, center, center);
+			}
 			li {
 				font: @headingsFont;
 				font-size: 1rem;
@@ -271,6 +301,10 @@ body {
 				border: 1px solid #333;
 				padding: 10px;
 				margin: 10px 10px 25px 10px;
+				@media (max-width: 500px) {
+					text-align: center;
+					margin: 5px;
+				}
 			}
 		}
 	}
@@ -284,6 +318,9 @@ body {
 		}
 		#box-container {
 			.flexLayout(row, center, center);
+			@media (max-width: 500px) {
+				.flexMobileLayout(column, center, center);
+			}
 		}
 		.box {
 			border: 1px solid #888;
@@ -307,6 +344,10 @@ body {
 					display: list-item;
 					list-style-type: square;
 					margin-bottom: 10px;
+					@media (max-width: 500px) {
+						display: block;
+						text-align: center;
+					}
 				}
 			}
 		}
