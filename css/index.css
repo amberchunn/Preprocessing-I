@@ -135,11 +135,183 @@ body {
   height: 100%;
 }
 /* Begin Styles */
+.linkStyle {
+  font-size: 1.25rem;
+  color: #ff9900;
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+}
+.linkHover {
+  color: #336600;
+}
 #container {
   width: 90%;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 1%;
   border: 1px solid #333;
+  background-color: #fdfdfd;
+  font-size: 1rem;
+  font-family: 'Cabin', sans-serif;
+}
+#container header {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #888;
+  padding-bottom: 20px;
+}
+#container header nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+  max-width: 50%;
+  margin: 0 auto;
+}
+#container header nav a {
+  font-size: 1.25rem;
+  color: #ff9900;
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  padding: 1%;
+  text-transform: uppercase;
+}
+#container header nav a:hover {
+  color: #336600;
+}
+#container #intro {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+}
+#container #intro figure {
+  width: 50%;
+  margin-right: 10%;
 }
 #container #intro figure img {
-  max-width: 50%;
+  max-width: 100%;
+}
+#container #biography {
+  width: 50%;
+  line-height: 1.75rem;
+}
+#container #biography h1 {
+  font-size: 2rem;
+  color: #ff9900;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#container #biography h2 {
+  font-size: 1.75rem;
+  color: #ff9900;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#container #biography h3 {
+  font-size: 1.5rem;
+  color: #ff9900;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+#container #biography button {
+  font-size: 1.25rem;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 2%;
+  background: #ff9900;
+  border: 1px solid #ccc;
+  margin: 25px auto;
+}
+#container #biography button:hover {
+  background: #336600;
+  cursor: pointer;
+}
+#container #biography p {
+  font-size: 1.25rem;
+}
+#container #biography p span a {
+  color: #ff9900;
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+#container #biography p span a:hover {
+  color: #336600;
+}
+#container #skills {
+  border-bottom: 1px solid #ccc;
+}
+#container #skills h4 {
+  font-size: 1.5rem;
+  color: #336600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin: 25px auto 5px auto;
+}
+#container #skills ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#container #skills ul li {
+  font: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  color: #ff9900;
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px 10px 25px 10px;
+}
+#container #work-history {
+  padding-top: 25px;
+}
+#container #work-history h4 {
+  font-size: 1.5rem;
+  color: #336600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+#container #work-history #box-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#container #work-history .box {
+  border: 1px solid #888;
+  padding: 10px;
+  margin: 5px;
+}
+#container #work-history .box h4 {
+  font-size: 1rem;
+  color: #336600;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#container #work-history .box .subtitle {
+  font-style: italic;
+  color: #888;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#container #work-history .box ul {
+  margin-left: 20px;
+}
+#container #work-history .box ul li {
+  display: list-item;
+  list-style-type: square;
+  margin-bottom: 10px;
 }

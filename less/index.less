@@ -144,64 +144,169 @@ body {
 // Variables
 
 @primaryColor: #336600;
-@accentColor: #03d4f5;
-@mainFont: Helvetica, Arial, sans-serif;
-@headingsFont: Times, serif;
+@accentColor: #ff9900;
+@mainFont: 'Cabin', sans-serif;
+@headingsFont: 'Josefin Sans', sans-serif;
 
 // Mixins
-
+.linkStyle {
+	font-size: 1.25rem;
+	color: @accentColor;
+	font-family: @mainFont;
+	text-decoration: none;
+}
+.linkHover {
+	color: @primaryColor;
+}
+.heading(@fontSize, @color) {
+	font-size: @fontSize;
+	color: @color;
+	font-family: @headingsFont;
+	font-weight: 700;
+}
+.flexLayout(@d, @j, @a) {
+	display: flex;
+	align-content: @a;
+	justify-content: @j;
+	flex-direction: @d;
+}
 // Styles
 
 #container {
 	width: 90%;
+	max-width: 960px;
 	margin: 0 auto;
+	padding: 1%;
 	border: 1px solid #333;
+	background-color: #fdfdfd;
+	font-size: 1rem;
+	font-family: @mainFont;
 
 	header {
+		width: 100%;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid #888;
+		padding-bottom: 20px;
 		nav {
+			.flexLayout(row, space-around, center);
+			max-width: 50%;
+			margin: 0 auto;
 			a {
+				.linkStyle();
+				padding: 1%;
+				text-transform: uppercase;
+			}
+			a:hover {
+				.linkHover();
 			}
 		}
 	}
 	#intro {
+		.flexLayout(row, center, center);
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 25px;
 		figure {
+			width: 50%;
+			margin-right: 10%;
 			img {
-				max-width: 50%;
+				max-width: 100%;
 			}
-			caption {
-			}
-		}
-		h1 {
-		}
-		h2 {
-		}
-		h3 {
-		}
-		button {
 		}
 	}
 	#biography {
+		width: 50%;
+		line-height: 1.75rem;
+		h1 {
+			.heading(2rem, @accentColor);
+			margin-bottom: 15px;
+		}
+		h2 {
+			.heading(1.75rem, @accentColor);
+			margin-bottom: 20px;
+		}
+		h3 {
+			.heading(1.5rem, @accentColor);
+			font-style: italic;
+		}
+		button {
+			font-size: 1.25rem;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 2%;
+			background: @accentColor;
+			border: 1px solid #ccc;
+			margin: 25px auto;
+		}
+		button:hover {
+			background: @primaryColor;
+			cursor: pointer;
+		}
 		p {
+			font-size: 1.25rem;
 			span {
 				a {
+					.linkStyle();
+					font-size: 1.25rem;
+				}
+				a:hover {
+					.linkHover();
 				}
 			}
 		}
 	}
 	#skills {
+		border-bottom: 1px solid #ccc;
+		h4 {
+			.heading(1.5rem, @primaryColor);
+			width: 100%;
+			text-align: center;
+			margin: 25px auto 5px auto;
+		}
 		ul {
+			.flexLayout(row, center, center);
 			li {
+				font: @headingsFont;
+				font-size: 1rem;
+				color: @accentColor;
+				border: 1px solid #333;
+				padding: 10px;
+				margin: 10px 10px 25px 10px;
 			}
 		}
 	}
 	#work-history {
+		padding-top: 25px;
+		h4 {
+			.heading(1.5rem, @primaryColor);
+			width: 100%;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		#box-container {
+			.flexLayout(row, center, center);
+		}
 		.box {
+			border: 1px solid #888;
+			padding: 10px;
+			margin: 5px;
 			h4 {
+				.heading(1rem, @primaryColor);
+				font-weight: 700;
+				margin-bottom: 5px;
 			}
-			p {
+			.subtitle {
+				font-style: italic;
+				color: #888;
+				width: 100%;
+				text-align: center;
+				margin-bottom: 10px;
 			}
 			ul {
+				margin-left: 20px;
 				li {
+					display: list-item;
+					list-style-type: square;
+					margin-bottom: 10px;
 				}
 			}
 		}
